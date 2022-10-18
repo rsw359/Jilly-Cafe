@@ -1,32 +1,37 @@
-
-
-.shown {
+.shown{
   display: flex;
   position: fixed;
   flex-direction: column;
-  inset: 0 0 0 85%;
+  inset: 0 0 0 90%;
   background-color: hsla(180, 20%, 94%, 0.512);
   backdrop-filter: blur(.25rem);
+  animation: slide ease 2s forwards;
   
 }
+
 
 .hidden {
   display: flex;
-  position: fixed;
+  position:fixed;
   flex-direction: column;
   align-items: center;
-  inset: 0 0 0 95%;
+  background-color: hsla(180, 20%, 94%, 0.512);
+  backdrop-filter: blur(.25rem);
+  inset: 0 0 0 100%;
+  animation: slideback ease 2s forwards;
+  
   
 }
 
-.menu-icon {
-  margin-inline: 1rem;
-}
+
 
 .menu-icon .menu-open {
   color: rgb(238, 13, 133);
-  margin-block: 1rem;
+  margin-top: 1rem;
+  margin-right: 3rem;
   font-size: 30px;
+  animation: fadeIn;
+  animation-duration: 02s;
   
   
 }
@@ -39,16 +44,20 @@
   animation-duration: 02s;
 }
 
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
+@keyframes slide {
+  100%  { left:85vw;}
+  0% { left: 100vw; }
+  
+}
 
-
-@media (max-width: 900px) {
-  .header-mobile {
-    inset: 0 90% 0 0;
-    justify-content: center;
-  }
+@keyframes slideback {
+  0%  { left:85vw;}
+  100% { left: 100vw; }
+  
 }
