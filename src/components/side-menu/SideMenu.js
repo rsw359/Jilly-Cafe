@@ -1,7 +1,7 @@
 import React from "react";
 
 function SideMenu() {
-  return <div>SideMenu</div>;
+  return <div className="sideMenu">SideMenu</div>;
 }
 
 export default SideMenu;
