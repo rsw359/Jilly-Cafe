@@ -23,7 +23,16 @@
   
 }
 
-
+.first-render {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsla(180, 20%, 94%, 0.512);
+  backdrop-filter: blur(.25rem);
+  inset: 0 0 0 100%;
+  animation: none;
+}
 
 .menu-icon .menu-open {
   color: rgb(238, 13, 133);
