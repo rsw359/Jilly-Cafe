@@ -1,8 +1,14 @@
 import React from "react";
 import "./SideMenu.css";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { useState } from "react";
 
-const SideMenu = ({ showMenu, openMenu }) => {
+const SideMenu = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const openMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <div className={showMenu ? "shown" : "hidden"}>
       {
@@ -10,7 +16,9 @@ const SideMenu = ({ showMenu, openMenu }) => {
           {!showMenu ? (
             <IoMdMenu className="menu-open" />
           ) : (
-            <IoMdClose className="menu-close" />
+            <IoMdClose
+              className={showMenu ? "menu-close" : "close-animation"}
+            />
           )}
         </div>
       }

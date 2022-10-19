@@ -18,8 +18,6 @@
   background-color: hsla(180, 20%, 94%, 0.512);
   backdrop-filter: blur(.25rem);
   inset: 0 0 0 100%;
-  animation: slideback ease 2s forwards;
-  
   
 }
 
@@ -44,6 +42,11 @@
   animation-duration: 02s;
 }
 
+.close-animation {
+  
+  animation: slideback ease 2s forwards;
+  
+}
 
 @keyframes fadeIn {
   0% { opacity: 0; }

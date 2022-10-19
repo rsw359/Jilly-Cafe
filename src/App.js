@@ -6,27 +6,17 @@ import { useState } from "react";
 import SideMenu from "./components/side-menu/SideMenu";
 
 const App = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  const openMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
   return (
     <>
       <div className="App">
         <div className="box">
           <div className="mtn-box">
-            <button id="logo" onClick={openMenu}>
-              Jily
-            </button>
+            <button id="logo">Jily</button>
             <img src={mountains} alt="mtns" />
           </div>
           <Router>
             <Routes>
-              <Route
-                path="/"
-                element={<SideMenu showMenu={showMenu} openMenu={openMenu} />}
-              />
+              <Route path="/" element={<SideMenu />} />
             </Routes>
           </Router>
         </div>
