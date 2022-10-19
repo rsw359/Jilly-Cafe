@@ -1,5 +1,5 @@
 import React from "react";
-import "./SideMenu.css";
+import sideMenuStyles from "./SideMenu.module.css";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 const SideMenu = ({ showMenu, openMenu }) => {
