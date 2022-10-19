@@ -11,18 +11,25 @@ const SideMenu = ({ showMenu, openMenu }) => {
       setSecondRender(true);
     }
   }, [showMenu]);
-  
+
   return (
-    <div className={showMenu ? "shown" : "hidden"}>
-      {
-        <div className="menu-icon" onClick={openMenu}>
-          {!showMenu ? (
-            <IoMdMenu className="menu-open" />
-          ) : (
-            <IoMdClose className="menu-close" />
-          )}
-        </div>
+    <div
+      className={
+        showMenu 
+        ? sideMenuStyles['shown'] 
+        : secondRender
+          ? sideMenuStyles['hidden']
+          : sideMenuStyles['first-render']
       }
+    >
+      <div className={sideMenuStyles['menu-icon']} onClick={openMenu}>
+        {showMenu ? (
+          
+          <IoMdClose className={sideMenuStyles['menu-close']} />
+          ) : (
+          <IoMdMenu className={sideMenuStyles['menu-open']}/>
+        )}
+      </div>
     </div>
   );
 };
