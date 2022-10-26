@@ -35,7 +35,7 @@
 
 
 .mtn-box{
-  
+  width: 100%;
   position: relative;
   animation-name: rise;
   animation-duration: 6s;
@@ -43,6 +43,7 @@
   padding-top: 12%;
   text-align:center
 }
+
 
 @keyframes rise {
   0%   {bottom:-100vh;}

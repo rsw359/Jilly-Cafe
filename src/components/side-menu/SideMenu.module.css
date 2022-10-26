@@ -2,13 +2,13 @@
   display: flex;
   position:fixed;
   flex-direction:column;
-  inset: 0 0 0 90%;
+  inset: 0 0 0 85%;
   background-color: hsla(180, 20%, 94%, 0.512);
   backdrop-filter: blur(.25rem);
-  animation: slide ease 2s forwards;
+  visibility: visible;
+  transition: all .7s ease-in-out
   
 }
-
 
 .hidden {
   display: flex;
@@ -17,20 +17,20 @@
   align-items: center;
   background-color: hsla(180, 20%, 94%, 0.512);
   backdrop-filter: blur(.25rem);
-  inset: 0 0 0 100%;
-  animation: slideback ease 2s forwards;
-  
+  inset: 0% 0 0 100%;
+  transition: all .7s ease-in-out
+
 }
 
 .first-render {
   display: flex;
   position: fixed;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   background-color: hsla(180, 20%, 94%, 0.512);
   backdrop-filter: blur(.25rem);
   inset: 0 0 0 100%;
-  animation: none;
+  
 }
 
 .menu-icon .menu-open {
@@ -40,8 +40,6 @@
   font-size: 30px;
   animation: fadeIn;
   animation-duration: 02s;
-  
-  
 }
 
 .menu-close {
@@ -60,6 +58,7 @@
   font-family: Courgette;
   color: rgb(106, 160, 202);
   list-style: none;
+  padding: unset;
   
 }
 .ul-item-hidden {
@@ -73,9 +72,8 @@
 .li-item {
   position: relative;
   margin-bottom: 10px;
-  animation: fadeIn 5s;
-  
-  
+  animation: fadeIn 4s;
+
 }
 
 .link-text {
@@ -90,7 +88,7 @@
   100% { opacity: 1; }
 }
 
-@keyframes slide {
+/* @keyframes slide {
   100%  { left:85vw;}
   0% { left: 100vw; }
   
@@ -100,7 +98,7 @@
   0%  { left:85vw;}
   100% { left: 100vw; }
   
-}
+} */
 
 @keyframes fadeOut {
   0% { opacity: 0; }
