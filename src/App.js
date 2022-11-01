@@ -15,10 +15,10 @@ const App = () => {
     <>
       <div className="App">
         <div className="box">
+          <button id="logo" onClick={openMenu}>
+            Jily
+          </button>
           <div className="mtn-box">
-            <button id="logo" onClick={openMenu}>
-              Jily
-            </button>
             <img src={mountains} alt="mtns" />
           </div>
           <Router>
